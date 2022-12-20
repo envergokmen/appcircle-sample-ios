@@ -21,7 +21,11 @@ steps:
     destinationSimulators: 'iPhone 11'
     publishJUnitResults: true
     testRunTitle: 'testrunningggg'
- 
+
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'JUnit'
+    testResultsFiles: '**/TEST-*.xml'
 
 - task: ArchiveFiles@2
   inputs:
